@@ -1,4 +1,6 @@
 .monaca/*
 .monaca/
 LICENSE
+.DS_Store
+*/.DS_Store
 build/
