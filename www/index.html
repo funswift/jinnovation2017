@@ -1,67 +1,135 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="jinnovation">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <script src="components/loader.js"></script>
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/onsenui/js/onsenui.min.js"></script>
-  <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nomal_and_officer_event.css">
+    <link rel="stylesheet" href="css/participants.css">
+    <link rel="stylesheet" href="css/config.css">
 
-  <link rel="stylesheet" href="components/loader.css">
-  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-  <link rel="stylesheet" href="css/style.css">
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/display.css">
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    var app = angular.module('jinnovation', ['onsen']);
 
-  <script>
-    ons.bootstrap()
-      .controller('HelloController', function() {
-          var ncmb = new NCMB("c43b5d5fe03f0563c9f2d53335f682b9c139f8267acd2aaf83a09465defefb0a", "55138871300b1f583d20bbf82f82b91b71d94987fb0f093fd868c401660dc4f5");
-            var TestClass = ncmb.DataStore("TestClass");
+    /*
+    devicereadyはons.readyの前に発生するイベント
+    ページがinitされる前に準備をしたい
+    */
+    document.addEventListener("deviceready", onDeviceReady, false);
+        /*
+        写真をdl・read・deleteするために各値を格納
+        */
+        function onDeviceReady() {
+            requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
+                //ルートのオブジェクトを格納 削除などで使用
+                rootObj = fileSystem.root;
+                //ルートのパスを格納
+                rootDir = fileSystem.root.toURL();
+            }, function(e) {
+                alert('ファイルアクセスエラー');
+            });
+        };
 
-            // 保存先クラスのインスタンスを生成         
-            var testClass = new TestClass();
-            var hoge ="";
-
-            // 値を設定と保存
-            testClass.set("message", "Hello, NCMB!")
-                .save()
-                .then(function(object){
-                    // 保存に成功した場合の処理
-                    TestClass.fetchAll().then(function(results){
-                        for (var i = 0; i < results.length; i++) {
-                        var object = results[i];
-                        hoge += object.message;
-                        alert(hoge);
-                        console.log(object.message);
-                    }
-
-                })
-                .catch(function(err){
-                    // 保存に失敗した場合の処理
-                    alert("error");
-                });  
-            
-          })
-         .catch(function(err){
-            console.log(err);
-          });
-          
-          
-          this.world = "World";
-      });
     ons.ready(function() {
-      console.log("Onsen UI is ready!");
+        EditNavigator.on('postpush', function(event){
+            //alert(EditNavigator.getCurrentPage().page);
+            if(EditNavigator.getCurrentPage().page == "officer_tab.html"){
+                //alert(EditNavigator.getCurrentPage().page);
+                //alert("役員モード移行");
+                getlist_o();
+                officertabbar.on('prechange', function(event) {
+                    var page = event.index;
+                    if(page==1){
+                        //alert("getinfoスタート！！");
+                        getinfo_o();
+                    }
+                    if(page==0){
+                        //alert("getlistスタート！！");
+                        getlist_o();
+                    }
+                });
+            }else if(EditNavigator.getCurrentPage().page == "normal_tab.html"){
+                //alert("一般モード移行");
+                getlist_n();
+                normaltabbar.on('prechange', function(event) {
+                    //alert(EditNavigator.getCurrentPage().page);
+                    var page = event.index;
+                    if(page==1){
+                        //alert("getinfoスタート！！");
+                        getinfo_n();
+                    }
+                    if(page==0){
+                        //alert("getlistスタート！！");
+                        getlist_n();
+                    }
+                });
+            }else if(EditNavigator.getCurrentPage().page == "admin_tab.html"){
+                //alert("一般モード移行");
+                getlist();
+                tabbar.on('prechange', function(event) {
+                    //alert(EditNavigator.getCurrentPage().page);
+                    var page = event.index;
+                    if(page==1){
+                        //alert("getinfoスタート！！");
+                        getinfo();
+                    }
+                    if(page==0){
+                        //alert("getlistスタート！！");
+                        getlist();
+                    }
+                });
+            }else if(EditNavigator.getCurrentPage().page == "join.html"){
+                showStorage();
+            }else{}
+        });
     });
-  </script>
+    </script>
+    <!-- JavaScriptの読み込みを設定 -->
+    <script src="js/vars.js"></script>
+    <script src="js/event_list.js"></script>
+    <script src="js/information.js"></script>
+    <script src="js/info_add.js"></script>
+    <script src="js/event_edit.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/event_add.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/join.js"></script>
+    <script src="js/participants_list.js"></script>
+    <script src="js/log_save.js"></script>
+    <script src="js/event_detail.js"></script>
+    <script src="js/participants.js"></script>
+    <script src="js/export_participants_list.js"></script>
+    <script src="js/pic_save.js"></script>
+    <link rel="stylesheet" href="css/normal_and_officer_information.css">
+
+
 </head>
 <body>
-  <ons-page ng-controller="HelloController as hello">
-    <ons-toolbar>
-      <div class="center">Introduction</div>
-    </ons-toolbar>
-    {{hello.world}}
-  </ons-page>
+    <ons-navigator var="EditNavigator">
+        <ons-page class="first">
+        <div class="back">
+        <img src="jino.png" width="100%";>
+                <br><br>
+                <!--<img src="jinkawa_logo.jpg">-->
+                <div class="zure">
+                <!--<ons-button modifier="green" onclick="EditNavigator.pushPage('login.html')"><span class="break_point_mid">役員モード移行ボタン</span></ons-button><br><br>-->
+
+                <ons-button modifier="thank" onclick="EditNavigator.pushPage('normal_tab.html')"><span class="break_point_mid"><span class="arigato">スタート</span></span></ons-button><br><br>
+                <!--<ons-button modifier="green" onclick="EditNavigator.pushPage('admin_tab.html')"><span class="break_point_mid">編集モード移行ボタン</span></ons-button><br><br>-->
+                 <ons-button modifier="yakuin" onclick="EditNavigator.pushPage('login.html')"><span class="break_point_mid"><span class="log">町会役員はコチラ＞</span></span></ons-button><br><br>
+
+               </div>
+           </div>
+        </ons-page>
+
+    </ons-navigator>
 </body>
 </html>
