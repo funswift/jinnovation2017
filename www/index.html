@@ -15,53 +15,30 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script>
-    ons.bootstrap()
-      .controller('HelloController', function() {
-          var ncmb = new NCMB("c43b5d5fe03f0563c9f2d53335f682b9c139f8267acd2aaf83a09465defefb0a", "55138871300b1f583d20bbf82f82b91b71d94987fb0f093fd868c401660dc4f5");
-            var TestClass = ncmb.DataStore("TestClass");
-
-            // 保存先クラスのインスタンスを生成         
-            var testClass = new TestClass();
-            var hoge ="";
-
-            // 値を設定と保存
-            testClass.set("message", "Hello, NCMB!")
-                .save()
-                .then(function(object){
-                    // 保存に成功した場合の処理
-                    TestClass.fetchAll().then(function(results){
-                        for (var i = 0; i < results.length; i++) {
-                        var object = results[i];
-                        hoge += object.message;
-                        alert(hoge);
-                        console.log(object.message);
-                    }
-
-                })
-                .catch(function(err){
-                    // 保存に失敗した場合の処理
-                    alert("error");
-                });  
-            
-          })
-         .catch(function(err){
-            console.log(err);
-          });
-          
-          
-          this.world = "World";
-      });
+    ons.bootstrap();
     ons.ready(function() {
       console.log("Onsen UI is ready!");
     });
   </script>
 </head>
 <body>
-  <ons-page ng-controller="HelloController as hello">
-    <ons-toolbar>
-      <div class="center">Introduction</div>
-    </ons-toolbar>
-    {{hello.world}}
-  </ons-page>
+    <ons-navigator var="EditNavigator">
+        <ons-page class="first">
+        <div class="back">
+        <img src="jino.png" width="100%";>
+                <br><br>
+                <!--<img src="jinkawa_logo.jpg">-->
+                <div class="zure">
+                <!--<ons-button modifier="green" onclick="EditNavigator.pushPage('login.html')"><span class="break_point_mid">役員モード移行ボタン</span></ons-button><br><br>-->
+
+                <ons-button modifier="thank" onclick="EditNavigator.pushPage('normal_tab.html')"><span class="break_point_mid"><span class="arigato">スタート</span></span></ons-button><br><br>
+                <!--<ons-button modifier="green" onclick="EditNavigator.pushPage('admin_tab.html')"><span class="break_point_mid">編集モード移行ボタン</span></ons-button><br><br>-->
+                 <ons-button modifier="yakuin" onclick="EditNavigator.pushPage('login.html')"><span class="break_point_mid"><span class="log">町会役員はコチラ＞</span></span></ons-button><br><br>
+
+               </div>
+           </div>
+        </ons-page>
+
+    </ons-navigator>
 </body>
 </html>
