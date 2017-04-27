@@ -1,23 +1,23 @@
 <!-- お知らせを表示するページ(一般と役員用) -->
-<ons-page ng-controller="InfoCtrl">
+<ons-page>
     <ons-toolbar>
         <div class="center">町内会からのお知らせ</div>
     </ons-toolbar>
     <div>
-        <input type="hidden" ng-init="GetInfoNormal()" />
         <ons-scroller>
-          <ons-list>
-            <ons-list-item ng-repeat="object in objects" modifier="tappable">
+          <ons-list ng-controller="InfoCtrl">
+            <ons-list-item ng-repeat="object in objects" modifier="tappable" ng-click="alert('tap!')">
 
             <ons-row>
             <ons-col width="30%" style="margin:2% 2% 0% 4%;">
-            <span></span>
+            <span ng-class="set_department($index)">
+            {{object.department_name}}</span>
             </ons-col>
 
             <ons-col>
             <p class="item-desc-info">
-            <span class="break_point_infotitle"> {{object.message}} <br></span>
-            <span class="break_point_infotime"><br></span>
+            <span class="break_point_infotitle"> {{object.title}} <br></span>
+            <span class="break_point_infotime"> {{object.date}} <br></span>
             </p>
             </ons-col>
 

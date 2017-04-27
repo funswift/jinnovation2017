@@ -1,0 +1,23 @@
+<!-- 役員としてログインするためにパスワードを入力するページ -->
+<ons-page class="login">
+    <ons-toolbar>
+        <div class="center">役員専用ログイン</div>
+        <div class="left">
+            <ons-back-button> </ons-back-button>
+        </div>
+    </ons-toolbar>
+    <div>
+        <br>
+        <div id="desc"><span class="pass"><p>パスワードを</p><p>入力してください</p></span></div>
+
+        <div><input type="textarea" id="password" placeholder="パスワード" class="hako"><br></div>
+
+        <div>
+            <span class="passbun">
+            </span>
+        </div>
+        <br>
+        <div>
+            <ons-button modifier="lo" onclick="login()"><span class="lomoji">ログイン</span></ons-button></div>
+    </div>
+</ons-page>
