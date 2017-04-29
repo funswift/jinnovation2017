@@ -20,7 +20,7 @@
     ons.ready(function() {
         console.log("Onsen UI is ready!");
         EditNavigator.on('postpush', function(event){
-            if(EditNavigator.getCurrentPage().page == "normal_tab.html"){
+            if(EditNavigator.topPage.name == "normal_tab.html"){
                 GetInformationByAuth("normal");
                 normaltabbar.on('prechange', function(event) {
                     var page = event.index;
