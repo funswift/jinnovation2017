@@ -1,17 +1,19 @@
-<!-- お知らせを表示するページ(一般と役員用) -->
+<!-- 管理者用のお知らせ画面です -->
 <ons-page>
     <ons-toolbar>
         <div class="center">町内会からのお知らせ</div>
+                <div class="right">
+            <!-- <ons-toolbar-button onclick="EditNavigator.pushPage('info_add.html')"><ons-icon icon="fa fa-plus" size="25px"></ons-icon></ons-toolbar-button> -->
+        </div>
     </ons-toolbar>
     <div>
         <ons-scroller>
           <ons-list ng-controller="InfoCtrl">
-            <ons-list-item ng-repeat="object in objects" modifier="tappable" ng-click="ShowInfoDetail($index, 'notAdmin')">
+            <ons-list-item ng-repeat="object in objects" modifier="tappable" ng-click="ShowInfoDetail($index, 'admin')">
 
             <ons-row>
-            <ons-col width="30%" style="margin:2% 2% 0% 4%;">
-            <span ng-class="set_department($index)">
-            {{object.department_name}}</span>
+            <ons-col width="30%" style="margin:2% 2% 0% 2%;">
+                <span ng-class="set_department($index)">{{object.department_name}}</span>
             </ons-col>
 
             <ons-col>

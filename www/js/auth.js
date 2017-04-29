@@ -1,6 +1,6 @@
 function login(){//役員としてログインするときに呼ばれる関数
     pass = document.getElementById("password").value;
-    if(pass == "jinkawa7955"){
+    if(pass == /*"jinkawa7955"*/"o"){
         ons.notification.alert({
             title: '認証されました',
             messageHTML: 'あなたは役員としてログインしました',
@@ -9,7 +9,7 @@ function login(){//役員としてログインするときに呼ばれる関数
                 EditNavigator.pushPage('officer_tab.html');
             }
         });
-    }else if(pass.match(/jinkawa885500\d/)){
+    }else if(pass/*.match(/jinkawa885500\d/)*/== "a"){
         var no = pass.slice(-1);
         ons.notification.alert({
             title: '認証されました',
@@ -25,7 +25,7 @@ function login(){//役員としてログインするときに呼ばれる関数
             messageHTML: 'パスワードを再入力してください',
             buttonlabel: 'OK',
             callback: function(){
-                //document.getElementById("password").value=null;
+                //document.getElementById("password").value=null;//入力欄をからにする
             }
         });
     }

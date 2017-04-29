@@ -32,6 +32,30 @@
                         //getlist_n();
                     }
                 });
+            } else if(EditNavigator.topPage.name == "officer_tab.html"){
+                GetInformationByAuth("officer");
+                officertabbar.on('prechange', function(event) {
+                    var page = event.index;
+                    if(page==1){
+                        GetInformationByAuth("officer");
+                    }
+                    if(page==0){
+                        //alert("getlistスタート！！");
+                        //getlist_n();
+                    }
+                });
+            } else if(EditNavigator.topPage.name == "admin_tab.html"){
+                GetInformationByAuth("admin");
+                admintabbar.on('prechange', function(event) {
+                    var page = event.index;
+                    if(page==1){
+                        GetInformationByAuth("admin");
+                    }
+                    if(page==0){
+                        //alert("getlistスタート！！");
+                        //getlist_n();
+                    }
+                });
             }
         });
     });

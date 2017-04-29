@@ -1,0 +1,42 @@
+<!-- イベントリストを表示するページ(一般と役員用) -->
+<ons-page>
+    <ons-toolbar>
+        <div class="center">開催予定イベント</div>
+    </ons-toolbar>
+<!--
+    <div class="eveli">
+        <ons-scroller>
+          <ons-list ng-controller="EventCtrl">
+              <ons-list-item ng-repeat="object in objects" modifier="tappable" class="item" ng-click="showDetail_o($index)">
+              <ons-row>
+                  <ons-col width="23%"> -->
+                   <!--ビルド時のエラーがこれっぽいので，保留（4/19 BOB） -->
+                  <!--<div class="item-thum"><img src='{{view_pic($index)}}'></img></div>-->
+                  <!--<div class="item-thum"><img src='https://mb.api.cloud.nifty.com/2013-09-01/applications/zMCtGPFYQE1JZ2UY/publicFiles/{{object.objectId}}'></img></div>-->
+                  <!-- <div class="item-thum"><img src='jinkawa_logo.jpg'></img></div>
+                  </ons-col>
+
+                  <ons-col>
+                      <header style="margin: 4% 0% 0% 8%;">
+                          <span ng-class="set_department($index)">{{object.event_department_name}}</span>
+                          <span class="update_date">最終更新日{{object.update_date}}</span>
+                      </header>
+
+                      <p class="item-desc">
+                      <span class="break_point_evetitle">
+                      {{object.event_name}}<br>
+                      </span>
+                      <span class="break_point">
+                      {{object.day}}　{{object.start_time}}〜{{object.end_time}}<br>
+                      {{object.location}}<br>
+                      </span>
+                      </p>
+                  </ons-col>
+
+              </ons-row>
+
+              </ons-list-item>
+            </ons-list>
+        </ons-scroller>
+    </div> -->
+</ons-page>
