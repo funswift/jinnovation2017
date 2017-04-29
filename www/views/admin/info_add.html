@@ -1,0 +1,64 @@
+<!-- 新規でお知らせを作成するときに情報を入力する画面です -->
+<ons-toolbar>
+    <div class="center">お知らせ新規作成</div>
+    <div class="left">
+        <ons-back-button>戻る</ons-back-button>
+    </div>
+<!--     <div class="right" style="margin-top: 5px;">
+        <ons-toolbar-button onclick="Information_add()"><ons-icon icon="fa-check-square" size="2x" style="color: blue"></ons-icon></ons-toolbar-button>
+    </div> -->
+</ons-toolbar>
+<div>
+<br>
+    <ons-row>
+        <ons-col width="40%">
+            <span class="event_com"><span class="eve_bun">担当部名</span></span>
+        </ons-col>
+        <ons-col>
+            <select id="department_name">
+        <option value="">選択してください</option>
+        <option value="総務部">総務部</option>
+        <option value="青年部">青年部</option>
+        <option value="役員">役員</option>
+        <option value="女性部">女性部</option>
+        <option value="環境部">環境部</option>
+        <option value="防火防犯部">防火防犯部</option>
+        <option value="交通部">交通部</option>
+        <option value="福祉部">福祉部</option>
+        <option value="Jバス部">Jバス部</option>
+            </select>
+        </ons-col>
+    </ons-row>
+
+    <HR>
+
+    <ons-row>
+        <ons-col width="40%">
+            <span class="event_com"><span class="eve_bun">タイトル名</span></span>
+        </ons-col>
+        <ons-col>
+            <input class="text-input;" type="text" size="20%" placeholder="タイトル名" id="title"/>
+        </ons-col>
+    </ons-row>
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%">
+        <span class="event_com"><span class="eve_bun">内容</span></span>
+        </ons-col>
+        <ons-col>
+        <span style="text-align: center;">
+            <textarea class="text-input; container_form"size="20%" type="text" rows="5" placeholder="コメント" id="announcement"/></textarea>
+        </span></span>
+        </ons-col>
+    </ons-row>
+    <HR>
+
+    <ons-row>
+        <ons-col width="100%" style="text-align: center;"> <span class="event_com">役員にのみ公開する</span><ons-switch class="onswi" var="officer_only_switch" checked></ons-switch></ons-col>
+    </ons-row>
+<br>
+    <div>
+    <ons-button onclick="InformationAdd()" modifier="info_update">作成する</ons-button>
+</div>
+</div>

@@ -21,7 +21,7 @@
         console.log("Onsen UI is ready!");
         EditNavigator.on('postpush', function(event){
             if(EditNavigator.topPage.name == "views/normal/normal_tab.html"){
-                GetInformationByAuth("normal");
+                GetInformationByAuth("normal");//todo:ここをイベントリスト取得関数に変更する
                 normaltabbar.on('prechange', function(event) {
                     var page = event.index;
                     if(page==1){
@@ -33,7 +33,7 @@
                     }
                 });
             } else if(EditNavigator.topPage.name == "views/officer/officer_tab.html"){
-                GetInformationByAuth("officer");
+                GetInformationByAuth("officer");//todo:ここをイベントリスト取得関数に変更する
                 officertabbar.on('prechange', function(event) {
                     var page = event.index;
                     if(page==1){
@@ -45,7 +45,7 @@
                     }
                 });
             } else if(EditNavigator.topPage.name == "views/admin/admin_tab.html"){
-                GetInformationByAuth("admin");
+                GetInformationByAuth("admin");//todo:ここをイベントリスト取得関数に変更する
                 admintabbar.on('prechange', function(event) {
                     var page = event.index;
                     if(page==1){

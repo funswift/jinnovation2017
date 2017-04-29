@@ -1,9 +1,9 @@
 var informations = [];//お知らせを格納する配列
 
 app.controller('InfoCtrl', function ($scope) {
-    $scope.objects = informations;
+    $scope.objects = informations;//お知らせリストを画面からバインド出来るようにする
 
-    //どの部署の情報なのかを判別してcssをあてる
+    //どの部署の情報なのかを判別してcssをあてる関数
     $scope.set_department = function (index){
         switch($scope.objects[index].department_name){
             case "総務部":
@@ -68,8 +68,9 @@ app.controller('InfoCtrl', function ($scope) {
     };
 });
 
+//お知らせのリストを取得する
 //authには"admin" "normal" "officer"のどれかが入る
-function GetInformationByAuth(auth){//お知らせのリストを取得する
+function GetInformationByAuth(auth){
     var Information = ncmb.DataStore("Information");
     if (auth == "normal"){
         Information.notEqualTo("officer_only", true)
@@ -161,4 +162,77 @@ function InfoDelete(index){
              // エラー処理
              alert("お知らせ削除エラーが発生しました");
      });
+}
+
+//お知らせを追加する関数
+function InformationAdd()
+{
+    //テキストボックスからおしらせのデータを取得
+    var department_name = $("#department_name").val();
+    var title = $("#title").val();
+    var info = $("#announcement").val();
+    var officer_only = officer_only_switch.isChecked();
+    var officer_only_msg;
+    if(officer_only){
+        officer_only_msg = "役員にのみ知らせる";
+    }else{
+        officer_only_msg = "全員に知らせる";
+    }
+    //クラス名を指定して新規クラスを作成
+    var Information = ncmb.DataStore("Information");
+    //Announcementクラスのインスタンスを作成
+    var information = new Information();
+    var dd = new Date();
+    var year = dd.getFullYear();
+    var month = dd.getMonth() + 1;
+    var day = dd.getDate();
+    var hours = dd.getHours();
+    var minutues = dd.getMinutes();
+    var date = year + '/' + month + '/' + day + ' ' + hours + ':' + minutues;
+    //作成したインスタンスのannouncementというフィールドに文字データを設定
+    information.set("department_name", department_name)
+               .set("title", title)
+               .set("date", date)
+               .set("info", info)
+               .set("officer_only",officer_only);
+    //設定したデータをmobile backendに保存
+    ons.notification.confirm({
+        title: 'この内容でよろしいですか？',
+        messageHTML:
+        '担当部名:' + department_name +'</br>'+
+        'タイトル名:' + title +'</br>' +
+        '内容:</br>' + info +'<br>'+
+        officer_only_msg,
+        buttonLabels: ['はい','いいえ'],
+        primaryButtonIndex: 1,
+        cancelable: true,
+        callback: function(index){
+            switch (index) {
+                case 0:
+                information.save()
+                .then(function(object)
+                {
+                    //成功する時の処理
+                    ons.notification.alert({
+                        title: '確認画面',
+                        messageHTML: 'お知らせを<br>作成しました。',
+                        buttonLabel: 'OK',
+                        callback: function(){
+                            EditNavigator.popPage();
+                            GetInformationByAuth("admin");//お知らせリストを取得し直す
+                        }
+                    });
+                })
+                .catch(function(error)
+                {
+                    //エラーが発生する時の処理
+                    $("#message")
+                    .html("error:" + error.message);
+                });
+                break;
+                default:
+            }
+        }
+    });
+
 }
