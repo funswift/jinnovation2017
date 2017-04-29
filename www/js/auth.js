@@ -6,7 +6,7 @@ function login(){//役員としてログインするときに呼ばれる関数
             messageHTML: 'あなたは役員としてログインしました',
             buttonlabel: 'OK',
             callback: function(){
-                EditNavigator.pushPage('officer_tab.html');
+                EditNavigator.pushPage('views/officer/officer_tab.html');
             }
         });
     }else if(pass/*.match(/jinkawa885500\d/)*/== "a"){
@@ -16,7 +16,7 @@ function login(){//役員としてログインするときに呼ばれる関数
             messageHTML: 'あなたは管理者 '+no+' としてログインしました',
             buttonlabel: 'OK',
             callback: function(){
-                EditNavigator.pushPage('admin_tab.html');
+                EditNavigator.pushPage('views/admin/admin_tab.html');
             }
         });
     }else{

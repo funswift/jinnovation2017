@@ -1,4 +1,5 @@
-var informations = [];
+var informations = [];//お知らせを格納する配列
+
 app.controller('InfoCtrl', function ($scope) {
     $scope.objects = informations;
 
@@ -80,10 +81,10 @@ function GetInformationByAuth(auth){//お知らせのリストを取得する
                     tmpInformations.push(object);
                 }
                 informations = tmpInformations;
-                normaltabbar.loadPage("normal_and_officer_information.html");
+                normaltabbar.loadPage("views/normal/normal_information.html");
             })
             .catch(function(err){
-                alert("インフォメーション取得エラー");
+                alert("一般インフォメーション取得エラー");
             });
     } else if (auth == "officer"){
         Information.fetchAll()
@@ -94,10 +95,10 @@ function GetInformationByAuth(auth){//お知らせのリストを取得する
                     tmpInformations.push(object);
                 }
                 informations = tmpInformations;
-                officertabbar.loadPage("normal_and_officer_information.html");
+                officertabbar.loadPage("views/officer/officer_information.html");
             })
             .catch(function(err){
-                alert("インフォメーション取得エラー");
+                alert("役員インフォメーション取得エラー");
             });
     } else {
         Information.fetchAll()
@@ -108,10 +109,10 @@ function GetInformationByAuth(auth){//お知らせのリストを取得する
                     tmpInformations.push(object);
                 }
                 informations = tmpInformations;
-                admintabbar.loadPage("admin_information.html");
+                admintabbar.loadPage("views/admin/admin_information.html");
             })
             .catch(function(err){
-                alert("インフォメーション取得エラー");
+                alert("管理者インフォメーション取得エラー");
             });
     }
 }
@@ -140,8 +141,7 @@ function InfoDelete(index){
                              messageHTML: 'お知らせを<br>削除しました。',
                              buttonLabel: 'OK',
                              callback: function(){
-                                 //getinfo();//削除が完了したらページを再読み込み。削除は編集モード専用であるので、編集モードようの関数である
-                                 GetInformationByAuth("admin");
+                                GetInformationByAuth("admin");//削除が完了したらページを再読み込み。削除は編集モード専用であるので、編集モードようの関数である
                              }
                          });
                      })
@@ -159,6 +159,6 @@ function InfoDelete(index){
      })
      .catch(function(err){
              // エラー処理
-             alert("エラーが発生しました");
+             alert("お知らせ削除エラーが発生しました");
      });
- }
+}
