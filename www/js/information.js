@@ -171,7 +171,7 @@ function InformationAdd()
     var department_name = $("#department_name").val();
     var title = $("#title").val();
     var info = $("#announcement").val();
-    var officer_only = officer_only_switch.isChecked();
+    var officer_only = officer_only_switch.checked;
     var officer_only_msg;
     if(officer_only){
         officer_only_msg = "役員にのみ知らせる";
