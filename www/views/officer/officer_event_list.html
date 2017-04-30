@@ -7,7 +7,7 @@
     <div class="eveli">
         <ons-scroller>
           <ons-list ng-controller="EventCtrl">
-              <ons-list-item ng-repeat="object in objects" modifier="tappable" class="item" ng-click="ShowDetail_o($index)">
+              <ons-list-item ng-repeat="object in objects" modifier="tappable" class="item" ng-click="ShowEventDetailByAuty($index, 'officer')">
               <ons-row>
                   <ons-col width="23%">
                    <!--ビルド時のエラーがこれっぽいので，保留（4/19 BOB） -->

@@ -104,8 +104,23 @@ app.controller('EventCtrl', function ($scope) {//EventCtrlという名前のコ�
         var object = eventList[index];
         EditNavigator.pushPage("event_detail_o.html", {object:object});
     };
+
+    //イベントの詳細を確認する関数
+    $scope.ShowEventDetailByAuty = function (index, auth){
+        var object = eventList[index];
+        if (auth == "normal"){
+            EditNavigator.pushPage("views/normal/normal_event_detail.html", { object: object });
+        } else if (auth == "officer") {
+            EditNavigator.pushPage("views/officer/officer_event_detail.html", { object: object });
+        } else if (auth == "admin") {
+            EditNavigator.pushPage("views/admin/admin_event_detail.html", { object: object });
+        }
+    };
 });
 
+
+//イベントのリストを取得する関数
+//authによって処理が変化する
 function GetEventListByAuth(auth){
     var Event = ncmb.DataStore("Event");
     var tmpEventList = [];
@@ -123,7 +138,7 @@ function GetEventListByAuth(auth){
         .catch(function(err){
             alert("一般イベントリスト取得エラー");
         });
-    } else if (auth == "offier") {
+    } else if (auth == "officer") {
         Event.fetchAll()
         .then(function(results){
             for (var i = 0; i < results.length; i++ ){

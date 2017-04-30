@@ -1,0 +1,64 @@
+<!-- イベント詳細　一般 -->
+<ons-page ng-controller="DetailCtrl">
+<!-- ツールバー -->
+<ons-toolbar>
+    <div class="center">{{object.event_name}}</div>
+    <div class="left">
+      <ons-back-button> </ons-back-button>
+    </div>
+</ons-toolbar>
+<body>
+    <div>
+            <p class="update_date_detail">最終更新日：{{object.update_date}}</p>
+            <div ng-click="Expansion_pic($index)" style="text-align: center;">
+                <img src='{{view_pic($index)}}'width=40%>
+            </div>
+         <br>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">担当部名</span></span></ons-col>
+                <ons-col> <span class="eve_bun" ng-class="set_department()">{{object.event_department_name}}</span></ons-col>
+            </ons-row>
+
+            <HR>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">日程</span></span> </ons-col>
+                <ons-col> <span class="eve_bun">{{object.day}} {{object.start_time}}~{{object.end_time}}</span></ons-col>
+            </ons-row>
+
+            <HR>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">場所</span></span> </ons-col>
+                <ons-col> <span class="eve_bun">{{object.location}}</span></ons-col>
+            </ons-row>
+
+            <HR>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">定員</span></span> </ons-col>
+                <ons-col> <span class="eve_bun">{{object.capacity}}</span></ons-col>
+            </ons-row>
+            <HR>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">詳細</span></span> </ons-col>
+                <ons-col><span class="eve_bun">{{object.description}}</span>
+                </ons-col>
+            </ons-row>
+            <HR>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">申込締切日</span></span> </ons-col>
+                <ons-col><span class="eve_bun">{{object.deadline_day}} {{object.deadline_time}}</span></div>
+                </ons-col>
+            </ons-row>
+            <HR>
+            <ons-row>
+                <ons-col width="40%"> <span class="event_com"><span class="eve_bun">作成日</span></span> </ons-col>
+                <ons-col><span class="eve_bun">{{object.create_date}}</span>
+                </ons-col>
+            </ons-row>
+            <br>
+        <div>
+            <ons-button ng-click="goToJoinform()" modifier="sanapp">参加を申し込む</ons-button>
+            <!-- EventUpdate()もEventDelete()もevent_edit.jsにある関数です -->
+        </div>
+    </div>
+    </body>
+    </ons-page>
