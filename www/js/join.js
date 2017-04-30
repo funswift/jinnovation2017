@@ -14,6 +14,27 @@ app.controller('JoinCtrl', function ($scope) {
     };
 });
 
+function GetJoinTime(){
+  //イベントの作成日
+  var dd = new Date();
+  var year = dd.getFullYear();
+  var month = dd.getMonth() + 1;
+  var Day = dd.getDate();
+  if(Day < 10){
+      Day = '0' + dd.getDate();
+  }else {}
+  var hours = dd.getHours();
+  if(hours < 10){
+      hours = '0' + dd.getHours();
+  }else {}
+  var minutues = dd.getMinutes();
+  if (minutues < 10){
+      minutues = '0' + dd.getMinutes();
+  }else {}
+  var date = year + '-' + month + '-' + Day + ' ' + hours + ':' + minutues;
+  return date;
+}
+
 function Join(){
     //入力情報をローカルストレージに保存する
     setStorage();
@@ -29,6 +50,7 @@ function Join(){
     }else if ($("#female").prop("checked")){
         sex="女性";
     }
+    var joinTime = GetJoinTime();
 
     //入力をチェックして問題なければ
     if (FormCheck(name, age, tell, address, sex)){
@@ -47,7 +69,7 @@ function Join(){
                 switch (index) {
                     case 0:
                         var Participant = ncmb.DataStore("Participants");
-                        var participant = new Participant({name:name, sex:sex, age:age, tell:tell, address:address, eventID:eventID});
+                        var participant = new Participant({name:name, sex:sex, age:age, tell:tell, address:address, eventID:eventID, join_time:joinTime});
                         participant.save()
                         .then(function(object){
                             ons.notification.alert({
