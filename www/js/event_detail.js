@@ -1,4 +1,5 @@
 app.controller('DetailCtrl', function ($scope) {
+    //前のページから送られたイベントオブジェクトを取得する
     var object = EditNavigator.topPage.pushedOptions.object;
     $scope.object = object;
 
@@ -43,7 +44,8 @@ app.controller('DetailCtrl', function ($scope) {
         window.open('jinkawa_logo.jpg');
     };
 
+    //参加申し込みフォームへ遷移させる
     $scope.GoToJoinform = function(){
-        EditNavigator.pushPage("join.html", {objectId: object.objectId, department: object.event_department_name});
+        EditNavigator.pushPage("views/join.html", {objectId: object.objectId, department: object.event_department_name});
     };
 });

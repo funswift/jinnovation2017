@@ -6,15 +6,15 @@
     <div class="left">
       <ons-back-button> </ons-back-button>
     </div>
-    <div class="right">
+    <!-- <div class="right">
         <ons-toolbar-button onclick="show_event_menu()"><ons-icon icon="fa fa-bars" size="25px"></ons-icon></ons-toolbar-button>
-    </div>
+    </div> -->
 
 
 </ons-toolbar>
 <body>
         <div>
-            <p class="update_date_detail">最終更新日：{{object.update_date}}</p>        
+            <p class="update_date_detail">最終更新日：{{object.update_date}}</p>
             <div ng-click="Expansion_pic($index)" style="text-align: center;">
                 <img src='{{view_pic($index)}}'width=40%>
             </div>
@@ -65,7 +65,7 @@
             </ons-row>
             <br>
         <div>
-          <ons-button ng-click="goToJoinform()" modifier="sanapp">参加を申し込む</ons-button><br>
+          <ons-button ng-click="GoToJoinform()" modifier="sanapp">参加を申し込む</ons-button><br>
             <!-- EventUpdate()もEventDelete()もevent_edit.jsにある関数です -->
         </div>
     </div>
