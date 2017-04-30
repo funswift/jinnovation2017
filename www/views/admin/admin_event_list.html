@@ -5,16 +5,16 @@
             <!-- <ons-toolbar-button onclick="EditNavigator.pushPage('event_add.html')"><ons-icon icon="fa fa-plus" size="25px"></ons-icon></ons-toolbar-button> -->
         </div>
     </ons-toolbar>
-    <!-- <div>
+    <div>
         <ons-scroller>
           <ons-list ng-controller="EventCtrl">
-              <ons-list-item ng-repeat="object in objects" modifier="tappable" class="item" ng-click="showDetail($index)">
+              <ons-list-item ng-repeat="object in objects" modifier="tappable" class="item" ng-click="ShowDetail($index)">
               <ons-row>
-                  <ons-col width="23%"> -->
+                  <ons-col width="23%">
                    <!--ビルド時のエラーがこれっぽいので，保留（4/19 BOB） -->
                   <!--<div class="item-thum"><img src='{{view_pic($index)}}'></div>-->
                   <!--<div class="item-thum"><img src='https://mb.api.cloud.nifty.com/2013-09-01/applications/zMCtGPFYQE1JZ2UY/publicFiles/{{object.objectId}}'></img></div>-->
-                  <!-- <div class="item-thum"><img src='jinkawa_logo.jpg'></img></div>
+                  <div class="item-thum"><img src='jinkawa_logo.jpg'></img></div>
                   </ons-col>
 
                   <ons-col>
@@ -39,5 +39,5 @@
               </ons-list-item>
         </ons-list>
     </ons-scroller>
-</div> -->
+</div>
 </ons-page>
