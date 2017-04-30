@@ -1,6 +1,7 @@
 var eventID;
 
 app.controller('JoinCtrl', function ($scope) {
+    //イベントIDと部署の取得
     eventID = EditNavigator.topPage.pushedOptions.objectId;
     var department = EditNavigator.topPage.pushedOptions.department;
 
@@ -14,6 +15,7 @@ app.controller('JoinCtrl', function ($scope) {
     };
 });
 
+//参加申し込みした時間を取得する
 function GetJoinTime(){
   //イベントの作成日
   var dd = new Date();
@@ -35,6 +37,7 @@ function GetJoinTime(){
   return date;
 }
 
+//参加者を登録する
 function Join(){
     //入力情報をローカルストレージに保存する
     setStorage();
