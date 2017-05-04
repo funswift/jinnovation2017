@@ -3,7 +3,7 @@ app.controller('EventCtrl', function ($scope) {//EventCtrlという名前のコ�
     $scope.objects = eventList;//$scopeというコントローラが設定されているページならどこでも参照できる変数？クラス？にobjectsというメンバ変数を作成し、そこにEvents配列を格納する。
 
     $scope.set_department = function(index){
-        switch (eventList[index].event_department_name) {
+        switch ($scope.objects[index].event_department_name) {
             case "総務部":
                 return 'somu';
             case "青年部":
