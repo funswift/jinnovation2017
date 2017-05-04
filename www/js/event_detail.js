@@ -50,7 +50,6 @@ app.controller('DetailCtrl', function ($scope) {
     };
 
     $scope.EventDelete = function(){
-        alert("削除するよ");
         var eventID = object.objectId;
         var Event = ncmb.DataStore("Event");
         Event.equalTo("objectId", eventID)
@@ -71,6 +70,7 @@ app.controller('DetailCtrl', function ($scope) {
                 callback: function(index){
                     switch (index) {
                         case 0:
+                        ParticipantsDelete(result.objectId);
                         result.delete()
                         .then(function(object)
                         {
@@ -141,5 +141,19 @@ function ShowEventMenu() {
                     break;
             }
         }
+    });
+}
+
+function ParticipantsDelete(eventID){
+    var Participants = ncmb.DataStore("Participants");
+    Participants.equalTo("eventID", eventID)
+    .fetchAll()
+    .then(function (results){
+        for (var i = 0; i < results.length; i++){
+            results[i].delete();
+        }
+    })
+    .catch(function (error){
+        alert("イベント削除に伴う参加者削除エラー");
     });
 }
