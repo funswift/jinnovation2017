@@ -49,6 +49,10 @@ app.controller('DetailCtrl', function ($scope) {
         EditNavigator.pushPage("views/join.html", {objectId: object.objectId, department: object.event_department_name});
     };
 
+    $scope.EventEdit = function(){
+        EditNavigator.pushPage("views/admin/event_edit.html", {object: object});
+    };
+
     $scope.EventDelete = function(){
         var eventID = object.objectId;
         var Event = ncmb.DataStore("Event");
@@ -126,7 +130,7 @@ function ShowEventMenu() {
                 case 0:
                 //編集
                     //$scope.eventDetail();
-                    alert("編集するよ");
+                    $scope.EventEdit();
                     break;
                 case 1:
                 //削除

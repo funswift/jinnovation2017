@@ -106,3 +106,22 @@ function clearStorage() {
         }
     });
 }
+
+//現在時刻の文字列を取得する関数
+function GetDateString(){
+    //イベントの作成日
+    var dd = new Date();
+    var year = dd.getFullYear();
+    var month = dd.getMonth() + 1;
+    var Day = dd.getDate();
+    if(Day < 10){
+        Day = '0' + dd.getDate();
+    }else {}
+    var hours = dd.getHours();
+    if(hours < 10){
+        hours = '0' + dd.getHours();
+    }else {}
+    var minutues = dd.getMinutes();
+    var date = year + '-' + month + '-' + Day + ' ' + hours + ':' + minutues;
+    return date;
+}
