@@ -1,0 +1,110 @@
+<!-- イベントの新規作成画面です・ -->
+<ons-toolbar>
+    <div class="center">イベント新規作成</div>
+    <div class="left">
+        <ons-back-button>戻る</ons-back-button>
+    </div>
+</ons-toolbar>
+<div>
+<br>
+    <div style="text-align:center;">
+        <div id="output"><ons-icon icon="fa-camera" size="3x"></ons-icon></div>
+        <label for="file-data">
+        写真を追加する
+        </label>
+        <!--<input type="file" id="file-data" style="display: none;"/>-->
+    </div>
+<br>
+<ons-row>
+   <ons-col width="40%"> <span class="event_com">担当部名</span> </ons-col>
+   <ons-col>
+   <select id="event_department_name">
+        <option value="">選択してください</option>
+        <option value="総務部">総務部</option>
+        <option value="青年部">青年部</option>
+        <option value="役員">役員</option>
+        <option value="女性部">女性部</option>
+        <option value="環境部">環境部</option>
+        <option value="防火防犯部">防火防犯部</option>
+        <option value="交通部">交通部</option>
+        <option value="福祉部">福祉部</option>
+        <option value="Jバス部">Jバス部</option>
+    </select>
+    </ons-col>
+</ons-row>
+
+
+        <HR>
+
+    <ons-row>
+
+        <ons-col width="40%"><span class="event_com">イベント名</span></ons-col>
+        <ons-col><input class="text-input; break_point" type="text" placeholder="イベント名" id="event_name" size="20%" /></ons-col>
+    </ons-row>
+
+
+
+    <HR>
+
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">日程</span> </ons-col>
+        <ons-col> <input class="text-input; break_point" type="date" id="day" size="20%" /></ons-col>
+    </ons-row>
+
+
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">場所</span> </ons-col>
+        <ons-col> <input class="text-input; break_point" type="text" placeholder="開催場所" id="location" size="20%" /></ons-col>
+    </ons-row>
+
+
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">開始時間</span> </ons-col>
+        <ons-col> <input class="text-input; break_point" type="time" id="start_time" size="20%" /></ons-col>
+    </ons-row>
+
+
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">終了時間</span> </ons-col>
+        <ons-col> <input class="text-input; break_point" type="time" id="end_time" size="20%" /></ons-col>
+    </ons-row>
+
+
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">定員</span> </ons-col>
+        <ons-col> <input class="text-input; break_point" type="text" placeholder="人数" id="capacity" size="20%" /></ons-col>
+    </ons-row>
+
+
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">詳細</span> </ons-col>
+        <ons-col><textarea class="text-input; break_point" type="text" rows="3" placeholder="コメント" id="description" size="20%" /></textarea>
+        </ons-col>
+    </ons-row>
+
+    <HR>
+    <ons-row>
+        <ons-col width="40%"> <span class="event_com">申込締切日</span> </ons-col>
+        <ons-col> <input class="text-input; break_point" type="date" id="deadline_day" size="20%" /><input class="text-input; break_point" type="time" id="deadline_time" size="20%" /></ons-col>
+    </ons-row>
+
+    <HR>
+    <ons-row>
+        <ons-col width="100%" style="text-align: center;"> <span class="event_com">役員にのみ公開する</span><ons-switch class="onswi" var="officer_only_switch"></ons-switch></ons-col>
+    </ons-row>
+
+</div>
+<br>
+    <div>
+    <ons-button onclick="EventAdd()" modifier="eve_update">作成する</ons-button>
+</div>
