@@ -1,0 +1,49 @@
+<!-- 参加者リストを表示するページ -->
+
+<ons-page>
+    <ons-toolbar>
+    <div class="center">参加者リスト</div>
+    <div class="left">
+      <ons-back-button> </ons-back-button>
+    </div>
+
+    <div class="right">　
+        <ons-toolbar-button onclick="ShowParticipantsMenu()">
+        <ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+    </div>
+    </ons-toolbar>
+
+    <div>
+        <ons-scroller>
+          <ons-list ng-controller="ParticipantsCtrl">
+            <ons-list-item ng-repeat="item in items">
+
+            <ons-col>
+            <div class="lefts">
+            <ons-button onclick="alert('削除')">
+            <ons-icon icon="ion-close-round" size="18px"></ons-icon>
+            </ons-button>
+            </div>
+            </ons-col>
+
+            <p class="item-desc_participants">
+            <ons-row>
+                <ons-col width="5%"></ons-col>
+                <ons-col><span class="break_point_participants">{{item.name}}</span></ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col width="5%"></ons-col>
+                <ons-col><span class="break_point">{{item.address}}</span></ons-col>
+                <ons-col width="10%"></ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col width="5%"></ons-col>
+                <ons-col><span class="break_point">{{item.tell}}</span></ons-col>
+                <ons-col width="10%"></ons-col>
+            </ons-row>
+            </p>
+            </ons-list-item>
+         </ons-list>
+        </ons-scroller>
+    </div>
+</ons-page>

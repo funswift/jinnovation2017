@@ -96,7 +96,6 @@ app.controller('DetailCtrl', function ($scope) {
                                     EditNavigator.popPage();
                                 }
                             });
-                            //alert("保存しました");
                         })
                         .catch(function(error)
                         {
@@ -109,11 +108,16 @@ app.controller('DetailCtrl', function ($scope) {
                     }
                 }
             });
-
         })
         .catch(function(error){
         });
     };
+
+    $scope.ParticipantsList = function(){
+        //EditNavigator.pushPage("views/admin/participants_list.html");
+        FetchAllParticipantsWhenPush(object.objectId);
+    };
+
 });
 
 function ShowEventMenu() {
@@ -139,7 +143,7 @@ function ShowEventMenu() {
                 case 2:
                 //参加者リスト
                     // $scope.ParticipantsList();
-                    alert("参加者確認するよ");
+                    $scope.ParticipantsList();
                     break;
                 default:
                     break;
