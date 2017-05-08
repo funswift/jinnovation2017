@@ -40,7 +40,7 @@ app.controller('ParticipantAddCtrl', function ($scope) {
                                     messageHTML: name+'さんを参加者として受け付けました。',
                                     buttonLabel: 'OK',
                                     callback: function(){
-                                        FetchAllParticipantsWhenPop();
+                                        FetchAllParticipantsWhenPop(eventID);
                                     }
                                 });
                             })
