@@ -1,7 +1,9 @@
 var participants = [];
+var eventObj;
 
-function FetchAllParticipantsWhenPush(eventID){
+function FetchAllParticipantsWhenPush(eventObj){
     var Participants = ncmb.DataStore("Participants");
+    var eventID = eventObj.objectId;
     Participants.equalTo("eventID", eventID)
     .fetchAll()
     .then(function(results){
@@ -10,7 +12,7 @@ function FetchAllParticipantsWhenPush(eventID){
             tmpParticipants.push(results[i]);
         }
         participants = tmpParticipants;
-        EditNavigator.pushPage("views/admin/participants_list.html", {eventID: eventID});
+        EditNavigator.pushPage("views/admin/participants_list.html", {eventObj: eventObj});
     })
     .catch(function(error){
         alert("参加者リストへの遷移時の参加者取得エラー");
@@ -66,7 +68,7 @@ function ShowParticipantsMenu(){
                     break;
                 case 1:
                     //exportList(export_par_List);
-                    alert("参加者リストのエクスポート");
+                    ExportList(eventObj, participants);
                     break;
                 case 2:
                     break;
@@ -83,7 +85,8 @@ function GoToParticipantAddForm(eventID){
 
 app.controller('ParticipantsCtrl', function($scope){
     $scope.items = participants;
-    eventID = EditNavigator.topPage.pushedOptions.eventID;
+    eventObj = EditNavigator.topPage.pushedOptions.eventObj;
+    eventID = eventObj.objectId;
 
     $scope.DeleteParticipants = function(index){
         var currentObj = $scope.items[index];

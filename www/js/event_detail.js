@@ -115,7 +115,7 @@ app.controller('DetailCtrl', function ($scope) {
 
     $scope.ParticipantsList = function(){
         //EditNavigator.pushPage("views/admin/participants_list.html");
-        FetchAllParticipantsWhenPush(object.objectId);
+        FetchAllParticipantsWhenPush(object);
     };
 
 });

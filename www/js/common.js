@@ -125,3 +125,49 @@ function GetDateString(){
     var date = year + '-' + month + '-' + Day + ' ' + hours + ':' + minutues;
     return date;
 }
+
+
+/*
+参加者リストを出力する関数
+*/
+function ExportList(eventObj, participants) {
+    //csvに挿入するデータの作成
+    //1行目はイベントの情報
+    var data = eventObj.event_name +","+ eventObj.day +","+ eventObj.location +","+ eventObj.event_department_name;
+    data += '\r\n';
+    //2行目は改行するため意図的な空白
+    data += ' ';
+    data += '\r\n';
+    //3行目は各行の項目名
+    data += "氏名,年齢,性別,電話番号,住所";
+    data += '\r\n';
+    
+    //名前年齢性別電話番号住所の順で挿入する
+    for (var i=0;i<participants.length;i++) {
+        var sep = '';
+        data +=  sep + participants[i].name;
+        sep = ',';
+        data +=  sep + participants[i].age;
+        data +=  sep + participants[i].sex;
+        data +=  sep + participants[i].tell;
+        data +=  sep + participants[i].address;
+        data += '\r\n';
+    }
+
+    // utf-8でcsvファイルを作成
+    var bom = new Uint8Array([0xEF, 0xBB, 0xBF]);
+    var blob;
+    blob = new Blob([bom, data], {type: 'text/csv'});
+    var filename = eventObj.objectId + '.csv'
+    
+    ncmb.File.upload(filename, blob)
+           .then(function(res){
+            // アップロード後処理
+            })
+            .catch(function(err){
+            // エラー処理
+            });
+
+    // Safariやchromeを用いて、生成したcsvを表示
+    window.open('https://mb.api.cloud.nifty.com/2013-09-01/applications/zMCtGPFYQE1JZ2UY/publicFiles/' + filename +'','_system','toolbarposition=top,suppressesIncrementalRendering=yes,location=no,closebuttoncaption=戻る');
+}
