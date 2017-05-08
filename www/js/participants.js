@@ -34,6 +34,23 @@ function FetchAllParticipantsWhenPop(eventID){
     });
 }
 
+function FetchAllParticipantsWhenReload(eventID){
+    var Participants = ncmb.DataStore("Participants");
+    Participants.equalTo("eventID", eventID)
+    .fetchAll()
+    .then(function(results){
+        var tmpParticipants = [];
+        for (var i = 0; i < results.length; i++){
+            tmpParticipants.push(results[i]);
+        }
+        participants = tmpParticipants;
+        EditNavigator.replacePage("views/admin/participants_list.html");
+    })
+    .catch(function(error){
+        alert("参加者参加者取得エラー");
+    });
+}
+
 function ShowParticipantsMenu(){
     ons.notification.confirm({
         title:"参加リスト",
@@ -45,7 +62,6 @@ function ShowParticipantsMenu(){
             switch(index){
                 case 0:
                     //goto_add_participant_form();
-                    alert("参加者の追加");
                     GoToParticipantAddForm(eventID);
                     break;
                 case 1:
@@ -68,4 +84,54 @@ function GoToParticipantAddForm(eventID){
 app.controller('ParticipantsCtrl', function($scope){
     $scope.items = participants;
     eventID = EditNavigator.topPage.pushedOptions.eventID;
+
+    $scope.DeleteParticipants = function(index){
+        var currentObj = $scope.items[index];
+        var Participant = ncmb.DataStore("Participants");
+        Participant.equalTo("objectId", currentObj.objectId)//選択されたInformationオブジェクトの取得
+        .fetch()
+        .then(function(result){
+            ons.notification.confirm({//ダイアログを表示する関数(２つ選択しがあるconfirm)
+                title: '本当に削除してよろしいですか？',
+                messageHTML: result.name+"<br>"+
+                             result.sex+"<br>"+
+                             result.age+"<br>"+
+                             result.tell+"<br>"+
+                             result.address+"<br>",
+                buttonLabels: ['はい','いいえ'],
+                primaryButtonIndex: 1,
+                cancelable: true,
+                callback: function(index){
+                    switch (index) {
+                        case 0:
+                        result.delete()
+                              .then(function(object)
+                        {
+                            //成功した時の処理
+                            ons.notification.alert({//ダイアログを表示する関数（１つしか選択肢がないalert）
+                                title: '確認画面',
+                                messageHTML: '参加者を<br>削除しました。',
+                                buttonLabel: 'OK',
+                                callback: function(){
+                                    FetchAllParticipantsWhenReload(eventID);
+                                }
+                            });
+                        })
+                        .catch(function(error)
+                        {
+                            //エラーが発生する時の処理
+                            $("#message")
+                            .html("error:" + error.message);
+                        });
+                        break;
+                        default:
+                    }
+                }
+            });
+        })
+        .catch(function(err){
+                // エラー処理
+                alert("参加者削除エラーが発生しました");
+        });
+    }
 });
