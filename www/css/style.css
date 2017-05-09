@@ -1,2 +1,35 @@
-/**/
-
+/*初期起動画面のスタイリング*/
+.first div {
+    text-align: center;
+}
+/*編集モードへ遷移する画面と戻る画面のスタイリング*/
+.around_admin div{
+    text-align: center;
+}
+/*ボタンを緑色にスタイリング*/
+.button--green{
+    background-color: green;
+}
+/*ボタンを青色にスタイリング*/
+.button--blue{
+    background-color: blue;
+}
+/*ボタンを赤色にスタイリング*/
+.button--red{
+    background-color: red;
+}
+/*ログイン画面のスタイリング*/
+.login div{
+    text-align: center;
+    /*padding: 10px;*/
+}
+/*イベント編集画面のスタイリング*/
+.editpage #button{
+    margin: 20px;
+    margin: 20px;
+}
+/*編集モードへ移る画面のスタイリング*/
+.admin div{
+    text-align: center;
+    padding: 20px;
+}

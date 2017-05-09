@@ -1,0 +1,471 @@
+/*参加ボタン*/
+.button--sanka{
+    background-color: #ccc;
+    font-size:30px;
+    padding:20px;
+    border-radius: 8px;
+}
+
+/*リスト全部*/
+.eveli{
+    width:100%;
+    margin:0 auto;
+}
+
+/*リスト１つの全体*/
+.item{
+ padding:10px;
+ line-height:1;
+ color:#595757;
+}
+
+/*アイコン部分*/
+.item-thum img{
+    margin-left:10px;
+    margin-top: 10px;
+    width:100%;
+}
+
+/*最終更新日*/
+.update_date{
+    margin:0% 0% 0% 0%;
+}
+
+/*最終更新日*/
+.update_date_detail{
+    text-align: left;;
+    margin:3% 0% 3% 3%;
+}
+.somu_info {
+    color: #fff;
+    background-color: #cc4454;
+    padding:5px;
+    
+    position: relative;
+    top:5px;
+    font-weight: 900;
+}
+
+.seinen_info {
+    color: #fff;
+    background-color: #4b93bc;
+    padding:5px;
+    
+    position: relative;
+    top:5px;
+    font-weight: 900;
+}
+
+.yakuin_info {
+    color: #fff;
+    background-color: #72c086;
+    padding:5px;
+    
+    position: relative;
+    top:5px;
+    font-weight: 900;
+}
+
+/*担当部の部分*/
+.item-title{
+    color: #fff;
+    background-color: #cc4454;
+    padding:5px;
+
+    position: relative;
+    left:20px;
+    top:5px;
+    font-weight: 900;
+}
+/*総務の場合*/
+.somu{
+    color: #fff;
+    background-color: #cc4454;
+    padding:5px 22px;
+    font-weight: 900;
+}
+/*青年の場合*/
+.seinen{
+    color: #fff;
+    background-color: #4b93bc;
+    padding:5px 22px;
+    font-weight: 900;
+}
+
+/*役員の場合*/
+.yakuin{
+    color: #fff;
+    background-color: #ce1d1c;
+    padding:5px 30px;  
+    font-weight: 900;
+}
+
+/*女性部の場合*/
+.josei{
+    color: #fff;
+    background-color: #d45273;
+    padding:5px 22px;    
+    font-weight: 900;
+}
+
+/*環境部の場合*/
+.kankyo{
+    color: #fff;
+    background-color: #3ba88d;
+    padding:5px 22px;
+    font-weight: 900;
+}
+
+/*防火防犯部の場合*/
+.bouka{
+    color: #fff;
+    background-color: #1e2952;
+    padding:5px 8px; 
+    font-weight: 900;
+}
+
+/*交通部の場合*/
+.traffic{
+    color: #fff;
+    background-color: #00913a;
+    padding:5px 22px;  
+    font-weight: 900;
+}
+
+/*福祉部の場合*/
+.fukushi{
+    color: #fff;
+    background-color: #d96047;
+    padding:5px 22px;
+    font-weight: 900;
+}
+
+/*Jバス部の場合*/
+.basu{
+    color: #fff;
+    background-color: #4cacd9;
+    padding:5px 17px;
+    font-weight: 900;
+}
+
+
+/*日にち・時間・場所の部分*/
+.item-desc{
+    margin-left:20px;
+    margin-top: 15px;
+
+    font-size:20px;
+    color:#666;
+    line-height:1.3;
+    padding:0 0px 0 0;
+}
+
+/* 320px以上 iPhone5*/
+@media (min-width: 320px) {
+  .break_point_evetitle {
+     font-size:13pt;
+     font-weight: 900;
+  }
+  
+.onswi{
+    font-size:11pt;
+    margin-left:30px;
+}
+
+.eve_bun{
+    font-size:11pt;
+}
+
+/*最終更新日*/
+.update_date{
+    font-size:7pt;
+}
+
+/*最終更新日*/
+.update_date_detail{
+    font-size:9pt;
+}
+/*参加を申し込む*/
+.button--sanapp{
+    bottom: 0;
+    background-color: #72c086;
+    font-size:15pt;
+    width:100%;
+    text-align: center;
+    padding:10px 0px;
+    font-weight: 900;
+}
+
+/*参加を確定する*/
+.button--kakutei{
+    position:absolute;
+    bottom: 0px;
+    background-color: #72c086;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+
+/*イベント作成する・更新する*/
+.button--eve_update{
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:15pt;
+    width:100%;
+    text-align: center;
+    padding:10px 0px;
+    font-weight: 900;
+}
+
+/*お知らせ作成する*/
+.button--info_update{
+    position: absolute;
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:15pt;
+    width:100%;
+    text-align: center;
+    padding:10px 0px;
+    font-weight: 900;
+}
+
+.somu,.seinen,.yakuin,.josei,.kankyo,.bouka,.traffic,.fukushi,.basu{
+   font-size:11pt;
+}
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+  .break_point_evetitle {
+     font-size:15pt;
+     font-weight: 900;
+  }
+  .onswi{
+    font-size:13pt;
+    margin-left:30px;
+}
+.eve_bun{
+    font-size:13pt;
+}
+/*最終更新日*/
+.update_date{
+    font-size:8pt;
+}
+
+/*最終更新日*/
+.update_date_detail{
+    font-size:11pt;
+}
+/*参加を申し込む*/
+.button--sanapp{
+    background-color: #72c086;
+    font-size:20pt;
+    width:100%;
+    text-align: center;
+    padding:15px 0px;
+}
+
+/*参加を確定する*/
+.button--kakutei{
+    background-color: #72c086;
+    font-size:20pt;
+    width:100%;
+    text-align: center;
+    padding:15px 0px;
+    font-weight: 900;
+}
+
+/*イベント作成する・更新する*/
+.button--eve_update{
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:20pt;
+    width:100%;
+    text-align: center;
+    padding:15px 0px;
+    font-weight: 900;
+}
+
+/*お知らせ作成する*/
+.button--info_update{
+    position: absolute;
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:20pt;
+    width:100%;
+    text-align: center;
+    padding:15px 0px;
+    font-weight: 900;
+}
+
+.somu,.seinen,.yakuin,.josei,.kankyo,.bouka,.traffic,.fukushi,.basu{
+   font-size:13pt;
+}
+
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .break_point_evetitle {
+    font-size:25pt;
+    font-weight: 900;
+  }
+  .onswi{
+    font-size:20pt;
+    margin-left:30px;
+}
+
+.eve_bun{
+    font-size:20pt;
+}
+/*最終更新日*/
+.update_date{
+    font-size:10pt;
+}
+
+/*最終更新日*/
+.update_date_detail{
+    font-size:18pt;
+}
+/*参加を申し込む*/
+.button--sanapp{
+    background-color: #72c086;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+}
+
+/*参加を確定する*/
+.button--kakutei{
+    position:fixed;
+    bottom: 0;
+    background-color: #72c086;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+/*イベント作成する・更新する*/
+.button--eve_update{
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+/*お知らせ作成する*/
+.button--info_update{
+    position: absolute;
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+.somu,.seinen,.yakuin,.josei,.kankyo,.bouka,.traffic,.fukushi,.basu{
+   font-size:20pt;
+}
+
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point_evetitle {
+    font-size:25pt;
+    font-weight: 900;
+  }
+  .onswi{
+    font-size:25pt;
+    margin-left:30px;
+}
+
+.eve_bun{
+    font-size:25pt;
+}
+/*最終更新日*/
+.update_date{
+    font-size:11pt;
+}
+
+/*最終更新日*/
+.update_date_detail{
+    font-size:23pt;
+}
+/*参加を申し込む*/
+.button--sanapp{
+    background-color: #72c086;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+}
+
+/*参加を確定する*/
+.button--kakutei{
+    position:absolute;
+    bottom: 0;
+    background-color: #72c086;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+/*イベント作成する・更新する*/
+.button--eve_update{
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+/*お知らせ作成する*/
+.button--info_update{
+    position: absolute;
+    bottom: 0;
+    background-color: #4b93bc;
+    font-size:25pt;
+    width:100%;
+    text-align: center;
+    padding:25px 0px;
+    font-weight: 900;
+}
+
+.somu,.seinen,.yakuin,.josei,.kankyo,.bouka,.traffic,.fukushi,.basu{
+   font-size:25pt;
+}
+
+}
+
+/*イベント新規作成*/
+.eve_width{
+    width:100%;
+    margin:0 auto;
+}
+
+.event_com{
+    padding:0px 5px;
+    background:rgba(255,0,0,0.0);
+    position: relative;
+    left:25px;
+    font-weight: 900;
+}
+
+
+
