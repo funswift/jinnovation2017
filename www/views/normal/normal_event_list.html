@@ -1,4 +1,6 @@
 <!-- イベントリストを表示するページ(一般と役員用) -->
+<link rel="stylesheet" href="css/normal_and_officer_event.css">
+
 <ons-page>
     <ons-toolbar>
         <div class="center">開催予定イベント</div>
@@ -27,14 +29,12 @@
                       {{object.event_name}}<br>
                       </span>
                       <span class="break_point">
-                      {{object.day}}　{{object.start_time}}〜{{object.end_time}}<br>
+                      {{object.day}}{{object.start_time}}〜{{object.end_time}}<br>
                       {{object.location}}<br>
                       </span>
                       </p>
                   </ons-col>
-
               </ons-row>
-
               </ons-list-item>
             </ons-list>
         </ons-scroller>
