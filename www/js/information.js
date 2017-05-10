@@ -74,6 +74,7 @@ function GetInformationByAuth(auth){
     var Information = ncmb.DataStore("Information");
     if (auth == "normal"){
         Information.notEqualTo("officer_only", true)
+            .order("updateDate",true)
             .fetchAll()
             .then(function(results){
                 var tmpInformations = [];
@@ -88,7 +89,8 @@ function GetInformationByAuth(auth){
                 alert("一般インフォメーション取得エラー");
             });
     } else if (auth == "officer"){
-        Information.fetchAll()
+        Information.order("updateDate",true)
+            .fetchAll()
             .then(function(results){
                 var tmpInformations = [];
                 for(var i =0; i<results.length; i++){
@@ -102,7 +104,8 @@ function GetInformationByAuth(auth){
                 alert("役員インフォメーション取得エラー");
             });
     } else {
-        Information.fetchAll()
+        Information.order("updateDate",true)
+            .fetchAll()
             .then(function(results){
                 var tmpInformations = [];
                 for(var i =0; i<results.length; i++){

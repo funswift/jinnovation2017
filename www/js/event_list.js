@@ -55,6 +55,7 @@ function GetEventListByAuth(auth){
     var tmpEventList = [];
     if (auth == "normal"){
         Event.notEqualTo("officer_only", true)
+        .order("updateDate",true)
         .fetchAll()
         .then(function(results){
             for (var i = 0; i < results.length; i++ ){
@@ -68,7 +69,8 @@ function GetEventListByAuth(auth){
             alert("一般イベントリスト取得エラー");
         });
     } else if (auth == "officer") {
-        Event.fetchAll()
+        Event.order("updateDate",true)
+        .fetchAll()
         .then(function(results){
             for (var i = 0; i < results.length; i++ ){
                 var object = results[i];
@@ -81,7 +83,8 @@ function GetEventListByAuth(auth){
             alert("役員イベントリスト取得エラー");
         });
     } else if (auth == "admin"){
-        Event.fetchAll()
+        Event.order("updateDate",true)
+        .fetchAll()
         .then(function(results){
             for (var i = 0; i < results.length; i++ ){
                 var object = results[i];
