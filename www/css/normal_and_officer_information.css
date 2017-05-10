@@ -1,0 +1,108 @@
+/* This is a CSS file */
+.department_desc{
+    width:30px;
+    position: relative;
+    top:5px;
+    font-weight: 500;
+    margin-right:10px;
+}
+
+/*.somu {
+    color: #fff;
+    background-color: #cc4454;
+    text-align: center;
+    padding:5px;
+}
+
+.seinen {
+    padding:5px;
+    color: #fff;
+    background-color: #0000ff;
+    text-align: center;
+}*/
+
+/*日にち・時間・場所の部分*/
+.item-desc{
+    margin-left:20px;
+    margin-top: 15px;
+
+    font-size:20px;
+    color:#666;
+    line-height:1.3;
+    padding:0 0px 0 0;
+}
+
+
+
+/* 320px以上 iPhone5*/
+@media (min-width: 320px) {
+  /*お知らせのタイトルたち*/
+.item-desc-info{
+    margin-top: 13px;
+    color:#666;
+    padding:0 0px 0 0;
+    line-height:1.5;
+}
+
+    .break_point_infotitle {
+     font-size:13pt;
+     font-weight: 900;
+  }
+    .break_point_infotime {
+     font-size:11pt;
+     font-weight: 400;
+  }
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+    .item-desc-info{
+    margin-top: 10px;
+    color:#666;
+    padding:0 0px 0 0;
+    line-height:1.8;
+}
+
+  .break_point_infotitle {
+     font-size:15pt;
+     font-weight: 900;
+  }
+
+    .break_point_infotime {
+     font-size:13pt;
+     font-weight:400;
+  }
+
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+    .item-desc-info{
+    margin-top: 10px;
+    color:#666;
+    padding:0 0px 0 0;
+    line-height:1.5;
+}
+
+  .break_point_infotitle {
+    font-size:25pt;
+    font-weight: 900;
+  }
+
+     .break_point_infotime {
+     font-size:22pt;
+     font-weight:400;
+  }
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point_infotitle {
+    font-size:25pt;
+    font-weight: 900;
+  }
+       .break_point_infotime {
+     font-size:22pt;
+     font-weight:400;
+  }
+}

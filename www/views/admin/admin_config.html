@@ -1,10 +1,13 @@
+<!-- CSSの設定 -->
+<link rel="stylesheet" href="css/config.css">
+
 <ons-page>
   <ons-toolbar>
     <div class="center">設定</div>
   </ons-toolbar>
 
   <ons-list>
-    <ons-list-item modifier="tappable" onclick="viewManual('admin')">
+    <ons-list-item modifier="tappable" onclick="window.open('views/admin/policy_admin.html','_blank','toolbarposition=top,suppressesIncrementalRendering=yes,closebuttoncaption=戻る,enableViewportScale=yes');">
       <div class="break_point_config">
         ヘルプ
       </div>

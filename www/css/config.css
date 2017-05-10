@@ -1,0 +1,91 @@
+/* 設定のcssです*/
+
+.break_point_config{
+    font-weight: 900;
+    color:#666;
+}
+
+.break_point_config2{
+    line-height: 1.5;
+    color:#666;
+}
+
+.break_point_config_url{
+    line-height: 1.5;
+    color:#3374b5;
+}
+
+/* 375px以上 iPhone5*/
+@media (min-width: 320px) {
+  .break_point_config{
+     font-size:14pt;
+     margin-top: 5px;
+     margin-left: 5px;
+  }
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+  .break_point_config{
+     font-size:15pt;
+     margin-top: 5px;
+     margin-left: 5px;
+  }
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .break_point_config{
+    font-size:22pt;
+    margin-top: 13px;
+    margin-left: 10px;
+  }
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point_config{
+    font-size:25pt;
+    margin-top: 13px;
+    margin-left: 10px;
+  }
+}
+
+
+/* 375px以上 iPhone5*/
+@media (min-width: 320px) {
+  .break_point_config2 {
+     font-size:12pt;
+     margin-left: 25px;
+     margin-bottom: 10px;
+  }
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+  .break_point_config2 {
+     font-size:12pt;
+     margin-left: 25px;
+     margin-bottom: 10px;
+  }
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .break_point_config2 {
+    font-size:20pt;
+    margin-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point_config2 {
+    font-size:23pt;
+    margin-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}

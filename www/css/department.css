@@ -1,0 +1,22 @@
+/* This is a CSS file */
+
+.somu_info {
+    color: #fff;
+    background-color: #cc4454;
+    padding:5px;
+    
+    position: relative;
+    left:20px;
+    top:5px;
+    font-weight: 900;
+}
+.seinen_info {
+    color: #fff;
+    background-color: #4b93bc;
+    padding:5px;
+    
+    position: relative;
+    left:20px;
+    top:5px;
+    font-weight: 900;
+}

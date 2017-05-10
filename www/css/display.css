@@ -1,0 +1,446 @@
+
+
+.top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mid {
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height:100%;
+    max-width: 800px;
+    box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+
+.break_point {
+
+}
+
+
+/* 375px以上 iPhone5*/
+@media (min-width: 320px) {
+  .break_point {
+     font-size:13pt;
+
+  }
+
+    /*ログイン画面の上文章*/
+    .pass{
+    text-align: center;
+    font-size:13pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+    /*ログイン画面の下文章*/
+    .passbun{
+      font-size:11pt;
+      line-height: 1;
+  }
+
+    /*ログイン画面の入力フォーム*/
+    .hako{
+      font-size: 13pt;
+      margin:30px 0px;
+  }
+
+  /*ログインボタンの中の文字*/
+  .lomoji{
+    text-align: center;
+    font-size:15pt;
+    font-weight: 900;
+}
+
+/*ログインボタンの大きさ*/
+  .button--lo{
+    margin-top:30px;
+    background-color: #4b93bc;
+    border-radius:10px;
+    width:180px;
+    height:40px;
+}
+
+.policy{
+    top:230px;
+    margin-right: 270px;
+}
+
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+  .break_point {
+     font-size:13pt;
+
+  }
+
+  /*ログイン画面の上文章*/
+    .pass{
+    text-align: center;
+    font-size:15pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/*ログイン画面の下文章*/
+  .passbun{
+      font-size:12pt;
+      line-height: 1;
+  }
+
+/*ログイン画面の入力フォーム*/
+  .hako{
+      font-size: 15pt;
+      margin:30px 0px;
+  }
+
+    /*ログインボタンの中の文字*/
+  .lomoji{
+    text-align: center;
+    font-size:15pt;
+    font-weight: 900;
+}
+
+/*ログインボタンの大きさ*/
+  .button--lo{
+    margin-top:30px;
+    background-color: #4b93bc;
+    border-radius:10px;
+    width:180px;
+    height:40px;
+}
+
+.policy{
+    top:305px;
+    margin-right: 270px;
+}
+
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .break_point {
+    font-size:25pt;
+
+  }
+
+  /*ログイン画面の上文章*/
+  .pass{
+    text-align: center;
+    font-size:25pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/*ログイン画面の下文章*/
+  .passbun{
+      font-size:22pt;
+      line-height: 1;
+  }
+
+ /*ログイン画面の入力フォーム*/
+  .hako{
+      font-size: 25pt;
+      margin:50px 0px;
+  }
+
+    /*ログインボタンの中の文字*/
+  .lomoji{
+    position: relative;
+    top:15px;
+    font-size:35pt;
+    font-weight: 900;
+}
+
+/*ログインボタンの大きさ*/
+  .button--lo{
+    margin-top:50px;
+    background-color: #4b93bc;
+    border-radius:10px;
+    width:300px;
+    height:80px;
+}
+
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point {
+    font-size:25pt;
+
+  }
+
+  /*ログイン画面の上文章*/
+    .pass{
+    text-align: center;
+    font-size:25pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/*ログイン画面の下文章*/
+  .passbun{
+      font-size:22pt;
+      line-height: 1;
+  }
+
+ /*ログイン画面の入力フォーム*/
+  .hako{
+      font-size: 25pt;
+      margin:50px 0px;
+  }
+
+    /*ログインボタンの中の文字*/
+  .lomoji{
+    position: relative;
+    top:15px;
+    font-size:35pt;
+    font-weight: 900;
+}
+
+/*ログインボタンの大きさ*/
+  .button--lo{
+    margin-top:50px;
+    background-color: #4b93bc;
+    border-radius:10px;
+    width:300px;
+    height:80px;
+}
+
+}
+
+.break_point_mid {
+
+}
+
+
+
+
+
+
+/* 375px以上 iPhone5*/
+@media (min-width: 320px) {
+  .break_point_mid {
+     font-size:13pt;
+  }
+
+/*スタートボタンの中の文字*/
+  .arigato{
+    position: relative;
+    top:10px;
+    left:2px;
+    font-size:22pt;
+    font-weight: 900;
+}
+
+/*スタートボタンの大きさ*/
+  .button--thank{
+    background-color: #c14b4a;
+    border-radius:20px;
+    width:180px;
+    height:60px;
+    top:260px;
+}
+
+/*ログインボタンの中の文字*/
+  .log{
+    color:#2a469b;
+    position: relative;
+    top:0px;
+    left:5px;
+    font-size:12pt;
+    font-weight: 900;
+}
+
+/*ログイン画面に行くボタン*/
+.button--yakuin{
+    background: rgba(255,0,0,0.0);
+    width:180px;
+    height:40px;
+    top:300px;
+    left:65px;
+}
+
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+  .break_point_mid {
+     font-size:15pt;
+
+  }
+  /*スタートボタンの中の文字*/
+    .arigato{
+    position: relative;
+    top:20px;
+    font-size:25pt;
+    font-weight: 900;
+    left:2px;
+}
+/*スタートボタンの大きさ*/
+   .button--thank{
+    background-color: #c14b4a;
+    border-radius:20px;
+    width:200px;
+    height:80px;
+    top:330px;
+
+}
+
+/*ログインボタンの中の文字*/
+  .log{
+    color:#2a469b;
+    position: relative;
+    top:0px;
+    left:5px;
+    font-size:16pt;
+    font-weight: 900;
+}
+
+/*ログイン画面に行くボタン*/
+.button--yakuin{
+    background: rgba(255,0,0,0.0);
+    width:230px;
+    height:40px;
+    top:380px;
+    left:65px;
+}
+
+}
+
+
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .break_point_mid {
+    font-size:25pt;
+  }
+      .arigato{
+    position: relative;
+    top:30px;
+    font-size:35pt;
+    font-weight: 900;
+}
+
+   .button--thank{
+    background-color: #c14b4a;
+    border-radius:20px;
+    width:300px;
+    height:120px;
+    top:430px;
+}
+
+/*ログインボタンの中の文字*/
+  .log{
+    color:#2a469b;
+    position: relative;
+    top:0px;
+    left:5px;
+    font-size:22pt;
+    font-weight: 900;
+}
+
+/*ログイン画面に行くボタン*/
+.button--yakuin{
+    background: rgba(255,0,0,0.0);
+    width:300px;
+    height:40px;
+    top:700px;
+    left:220px;
+}
+
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point_mid {
+    font-size:25pt;
+  }
+      .arigato{
+    position: relative;
+    top:20px;
+    font-size:20pt;
+    font-weight: 900;
+}
+
+   .button--thank{
+    background-color: #c14b4a;
+    border-radius:20px;
+    width:200px;
+    height:80px;
+    top:430px;
+}
+
+/*ログインボタンの中の文字*/
+  .log{
+    color:#2a469b;
+    position: relative;
+    top:0px;
+    left:5px;
+    font-size:22pt;
+    font-weight: 900;
+}
+
+/*ログイン画面に行くボタン*/
+.button--yakuin{
+    background: rgba(255,0,0,0.0);
+    width:300px;
+    height:40px;
+    top:1000px;
+    left:420px;
+}
+
+}
+
+.back{
+    width: 100%;
+    z-index: 1;
+
+
+}
+
+.zure{
+    z-index: 2;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+
+.ale{
+    color:black;
+    margin:0 auto;
+    font-size:12pt;
+}
+
+.ale p{
+text-align: left;
+line-height: 20pt;
+}
+
+.bold{
+font-weight: 900;
+}
+
+img{
+    text-align:center;
+}
+
+.right{
+    margin-top:3px;
+    margin-left:-4px;
+}
+
+.left{
+    margin-left:3px;
+}

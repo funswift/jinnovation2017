@@ -1,0 +1,45 @@
+.lefts{
+    margin-top: -8px;
+    margin-left: -12px;
+}
+
+.item-desc_participants{
+    margin-left:20px;   
+    margin-top: -10px;
+    font-size:20px;
+    color:#666;
+    line-height:1.5;
+    padding:0 0px 0 0;
+}
+
+/* 320px以上 iPhone5*/
+@media (min-width: 320px) {
+  .break_point_participants {
+     font-size:13pt;
+     font-weight: 600;
+  }
+}
+
+/* 375px以上 iPhone6/6plus*/
+@media (min-width: 375px) {
+  .break_point_participants {
+     font-size:15pt;
+     font-weight: 600;
+  }
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .break_point_participants {
+    font-size:25pt;
+    font-weight: 600;
+  }
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .break_point_participants {
+    font-size:25pt;
+    font-weight: 600;
+  }
+}
