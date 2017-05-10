@@ -29,7 +29,7 @@ textarea {
      font-size:13pt;
 
   }
-  
+
     /*ログイン画面の上文章*/
     .pass{
     text-align: center;
@@ -43,13 +43,13 @@ textarea {
       font-size:11pt;
       line-height: 1;
   }
-  
+
     /*ログイン画面の入力フォーム*/
     .hako{
       font-size: 13pt;
       margin:30px 0px;
   }
-  
+
   /*ログインボタンの中の文字*/
   .lomoji{
     text-align: center;
@@ -66,6 +66,11 @@ textarea {
     height:40px;
 }
 
+.policy{
+    top:230px;
+    margin-right: 270px;
+}
+
 }
 
 /* 375px以上 iPhone6/6plus*/
@@ -74,7 +79,7 @@ textarea {
      font-size:13pt;
 
   }
-  
+
   /*ログイン画面の上文章*/
     .pass{
     text-align: center;
@@ -88,13 +93,13 @@ textarea {
       font-size:12pt;
       line-height: 1;
   }
-  
+
 /*ログイン画面の入力フォーム*/
   .hako{
       font-size: 15pt;
       margin:30px 0px;
   }
-  
+
     /*ログインボタンの中の文字*/
   .lomoji{
     text-align: center;
@@ -111,6 +116,11 @@ textarea {
     height:40px;
 }
 
+.policy{
+    top:305px;
+    margin-right: 270px;
+}
+
 }
 
 /* 768px以上 */
@@ -119,7 +129,7 @@ textarea {
     font-size:25pt;
 
   }
-  
+
   /*ログイン画面の上文章*/
   .pass{
     text-align: center;
@@ -133,13 +143,13 @@ textarea {
       font-size:22pt;
       line-height: 1;
   }
-  
- /*ログイン画面の入力フォーム*/ 
+
+ /*ログイン画面の入力フォーム*/
   .hako{
       font-size: 25pt;
       margin:50px 0px;
   }
-  
+
     /*ログインボタンの中の文字*/
   .lomoji{
     position: relative;
@@ -156,7 +166,7 @@ textarea {
     width:300px;
     height:80px;
 }
-  
+
 }
 
 /* 992px以上 */
@@ -165,7 +175,7 @@ textarea {
     font-size:25pt;
 
   }
-  
+
   /*ログイン画面の上文章*/
     .pass{
     text-align: center;
@@ -179,13 +189,13 @@ textarea {
       font-size:22pt;
       line-height: 1;
   }
-  
- /*ログイン画面の入力フォーム*/ 
+
+ /*ログイン画面の入力フォーム*/
   .hako{
       font-size: 25pt;
       margin:50px 0px;
   }
-  
+
     /*ログインボタンの中の文字*/
   .lomoji{
     position: relative;
@@ -202,7 +212,7 @@ textarea {
     width:300px;
     height:80px;
 }
-  
+
 }
 
 .break_point_mid {
@@ -434,5 +444,3 @@ img{
 .left{
     margin-left:3px;
 }
-
-
