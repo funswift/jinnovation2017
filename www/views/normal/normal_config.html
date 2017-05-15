@@ -4,6 +4,9 @@
 
 <ons-page>
   <ons-toolbar>
+    <div class="left">
+      <ons-back-button> </ons-back-button>
+    </div>
     <div class="center">設定</div>
   </ons-toolbar>
 
@@ -19,30 +22,30 @@
       </ons-row>
     </ons-list-item>
 
-     <ons-list-item modifier="chevron" tappable>
+    <ons-list-item modifier="chevron" tappable>
       <div class="reset" onclick="clearStorage();">
         <div class="break_point_config">
           入力情報のリセット
         </div>
         <ons-row>
-         <div class="break_point_config2">
+          <div class="break_point_config2">
             参加申し込みで入力した情報の<br>履歴が削除されます。
-         </div>
+          </div>
         </ons-row>
       </div>
-       </ons-list-item>
-        <ons-list-item>
+    </ons-list-item>
+    <ons-list-item>
       <div class="break_point_config">
-          陣川あさひ町会
+        陣川あさひ町会
+      </div>
+      <ons-row>
+        <div class="break_point_config2">
+          住所：北海道函館市陣川町79−55<br> 電話番号：
+          <a href="tel:0138318855">0138-31-8855</a><br> ホームページ：
+          <span class="break_point_config_url" onclick="open_jinkawaHP();">http://www.jinkawaasahi.com/</span>
         </div>
-        <ons-row>
-         <div class="break_point_config2">
-            住所：北海道函館市陣川町79−55<br>
-            電話番号：<a href="tel:0138318855">0138-31-8855</a><br>
-            ホームページ：<span class="break_point_config_url" onclick="open_jinkawaHP();">http://www.jinkawaasahi.com/</span>
-         </div>
-        </ons-row>
-       </ons-list-item>
+      </ons-row>
+    </ons-list-item>
 
   </ons-list>
 </ons-page>
