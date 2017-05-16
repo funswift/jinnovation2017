@@ -18,13 +18,16 @@
           <ons-list ng-controller="ParticipantsCtrl">
             <ons-list-item ng-repeat="item in items">
 
+<ons-row>
             <ons-col>
             <div class="lefts">
-            <ons-button ng-click="DeleteParticipants($index)">
-            <ons-icon icon="ion-close-round" size="18px"></ons-icon>
+            <ons-button ng-click="DeleteParticipants($index)" modifier="quiet">
+            <ons-icon icon="ion-close-round" size="15px"></ons-icon> 
+           <!--<ons-icon icon="fa-fa fa-times" size="18px"></ons-icon>-->
             </ons-button>
             </div>
             </ons-col>
+</ons-row>
 
             <p class="item-desc_participants">
             <ons-row>
