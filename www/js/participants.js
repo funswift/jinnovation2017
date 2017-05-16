@@ -46,7 +46,6 @@ function FetchAllParticipantsWhenReload(eventID){
             tmpParticipants.push(results[i]);
         }
         participants = tmpParticipants;
-        alert("リロード");
         EditNavigator.replacePage("views/admin/participants_list.html", {eventObj: eventObj, animation: 'none'});
     })
     .catch(function(error){
