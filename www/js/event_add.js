@@ -134,8 +134,12 @@ function GetEventInfo(){
 
 function CheckEventData(eventObj){
     var alertMsg = "";
+    if (eventObj.event_department_name === "")
+        alertMsg += "担当部名を選択してください<br>";
+
     if (eventObj.event_name === "")
         alertMsg += "イベント名を入力してください<br>";
+
     if ((eventObj.event_department_name == "役員") && (!eventObj.officer_only))
         alertMsg += "「役員のみに公開する」がオンになっていません<br>";
     return alertMsg;
