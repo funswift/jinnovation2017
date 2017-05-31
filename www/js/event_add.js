@@ -45,7 +45,7 @@ function EventAdd()//イベント新規作成する関数
             '<br>詳細 '+eventObj.description+
             '<br>申込締切日 '+eventObj.deadline_day+" "+eventObj.deadline_time+'<br>'  +eventObj.officer_only_msg+'<br>',
             buttonLabels: ['はい','いいえ'],
-            primaryButtonIndex: 1,
+            primaryButtonIndex: 0,
             cancelable: true,
             callback: function(index){
                 switch (index) {
