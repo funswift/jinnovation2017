@@ -131,7 +131,7 @@ function InfoDelete(index) {
                 title: '本当に削除してよろしいですか？',
                 messageHTML: result.info,
                 buttonLabels: ['はい', 'いいえ'],
-                primaryButtonIndex: 1,
+                primaryButtonIndex: 0,
                 cancelable: true,
                 callback: function (index) {
                     switch (index) {
@@ -207,7 +207,7 @@ function InformationAdd() {
             '内容:</br>' + info + '<br>' +
             officer_only_msg,
             buttonLabels: ['はい', 'いいえ'],
-            primaryButtonIndex: 1,
+            primaryButtonIndex: 0,
             cancelable: true,
             callback: function (index) {
                 switch (index) {

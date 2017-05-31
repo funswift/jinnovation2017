@@ -69,7 +69,7 @@ app.controller('DetailCtrl', function ($scope) {
                 '<br>定員 '+result.capacity+
                 '<br>詳細 '+result.description+'<br>',
                 buttonLabels: ['はい','いいえ'],
-                primaryButtonIndex: 1,
+                primaryButtonIndex: 0,
                 cancelable: true,
                 callback: function(index){
                     switch (index) {

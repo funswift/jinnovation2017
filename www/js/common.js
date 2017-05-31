@@ -86,7 +86,7 @@ function clearStorage() {
         messageHTML:
         '参加申し込みで入力した情報の履歴が削除されますがよろしいですか？',
         buttonLabels: ['はい','いいえ'],
-        primaryButtonIndex: 1,
+        primaryButtonIndex: 0,
         cancelable: true,
         callback: function(index){
             switch (index) {

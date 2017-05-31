@@ -102,7 +102,7 @@ app.controller('ParticipantsCtrl', function($scope){
                              result.tell+"<br>"+
                              result.address+"<br>",
                 buttonLabels: ['はい','いいえ'],
-                primaryButtonIndex: 1,
+                primaryButtonIndex: 0,
                 cancelable: true,
                 callback: function(index){
                     switch (index) {

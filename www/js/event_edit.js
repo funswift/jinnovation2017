@@ -36,7 +36,7 @@ app.controller('EditCtrl', function ($scope) {
             '<br>詳細 '+description+
             '<br>申込締切日 '+deadline_day+" "+deadline_time+'<br>'+officer_only_msg+'<br>',
             buttonLabels: ['はい','いいえ'],
-            primaryButtonIndex: 1,
+            primaryButtonIndex: 0,
             cancelable: true,
             callback: function(index){
                 switch (index) {

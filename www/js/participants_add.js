@@ -26,7 +26,7 @@ app.controller('ParticipantAddCtrl', function ($scope) {
                 '<br>住所 '+address+
                 '<br><br><h4>参加取り消しは町会に直接ご連絡ください<h4>',
                 buttonLabels: ['はい','いいえ'],
-                primaryButtonIndex: 1,
+                primaryButtonIndex: 0,
                 cancelable: true,
                 callback: function(index){
                     switch (index) {
