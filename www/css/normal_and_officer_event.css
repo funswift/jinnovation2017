@@ -40,7 +40,7 @@
     color: #fff;
     background-color: #cc4454;
     padding:5px;
-    
+
     position: relative;
     top:5px;
     font-weight: 900;
@@ -50,7 +50,7 @@
     color: #fff;
     background-color: #4b93bc;
     padding:5px;
-    
+
     position: relative;
     top:5px;
     font-weight: 900;
@@ -60,7 +60,7 @@
     color: #fff;
     background-color: #72c086;
     padding:5px;
-    
+
     position: relative;
     top:5px;
     font-weight: 900;
@@ -96,7 +96,7 @@
 .yakuin{
     color: #fff;
     background-color: #ce1d1c;
-    padding:5px 30px;  
+    padding:5px 30px;
     font-weight: 900;
 }
 
@@ -104,7 +104,7 @@
 .josei{
     color: #fff;
     background-color: #d45273;
-    padding:5px 22px;    
+    padding:5px 22px;
     font-weight: 900;
 }
 
@@ -120,7 +120,7 @@
 .bouka{
     color: #fff;
     background-color: #1e2952;
-    padding:5px 8px; 
+    padding:5px 8px;
     font-weight: 900;
 }
 
@@ -128,7 +128,7 @@
 .traffic{
     color: #fff;
     background-color: #00913a;
-    padding:5px 22px;  
+    padding:5px 22px;
     font-weight: 900;
 }
 
@@ -166,7 +166,7 @@
      font-size:13pt;
      font-weight: 900;
   }
-  
+
 .onswi{
     font-size:11pt;
     margin-left:30px;
@@ -461,6 +461,7 @@
 
 .event_com{
     padding:0px 5px;
+    margin-top: 100px;
     background:rgba(255,0,0,0.0);
     position: relative;
     left:25px;
