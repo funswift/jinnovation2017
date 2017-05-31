@@ -171,3 +171,8 @@ function ExportList(eventObj, participants) {
     //window.open('https://mb.api.cloud.nifty.com/2013-09-01/applications/zMCtGPFYQE1JZ2UY/publicFiles/' + filename +'','_system','toolbarposition=top,suppressesIncrementalRendering=yes,location=no,closebuttoncaption=戻る');
     window.open('https://mb.api.cloud.nifty.com/2013-09-01/applications/zMCtGPFYQE1JZ2UY/publicFiles/' + filename +'','_system','location=no');
 }
+
+function open_jinkawaHP(){
+    window.open('http://www.jinkawaasahi.com/','_blank','toolbarposition=top,suppressesIncrementalRendering=yes,closebuttoncaption=戻る,enableViewportScale=yes');//アプリ内
+    //window.open('http://www.jinkawaasahi.com/','_system');//Safari or Chrome
+}
