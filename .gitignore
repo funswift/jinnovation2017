@@ -1,1 +1,5 @@
 #
+.monaca/
+LICENSE
+build/
+ios_build_info.txt
