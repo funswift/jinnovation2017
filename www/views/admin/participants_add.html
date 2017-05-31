@@ -1,9 +1,12 @@
 <!-- 一般がイベントに参加申し込みをするために参加者情報を入力するページです。 -->
 
-<ons-toolbar>
-    <div class="center">参加者の追加</div>
+<ons-toolbar ng-controller="ParticipantAddCtrl">
     <div class="left">
-      <ons-back-button> </ons-back-button>
+      <ons-toolbar-button onclick="EditNavigator.popPage();" modifier="quiet">キャンセル</ons-toolbar-button>
+    </div>
+    <div class="center">参加者の追加</div>
+    <div class="right" style="margin-top:-0.7px;">
+        <ons-toolbar-button modifier="quiet" style="font-weight: bold;" ng-click="AddParticipant()">完了</ons-toolbar-button>
     </div>
 </ons-toolbar>
 <ons-page ng-controller="ParticipantAddCtrl">
@@ -37,7 +40,7 @@
 
 </div>
 
-<div>
+<!--<div>
     <ons-button ng-click="AddParticipant()" modifier="kakutei">確定する</ons-button>
-</div>
+</div>-->
 </ons-page>

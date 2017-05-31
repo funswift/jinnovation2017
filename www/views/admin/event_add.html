@@ -3,9 +3,12 @@
 
 <!-- イベントの新規作成画面です・ -->
 <ons-toolbar>
-    <div class="center">イベント新規作成</div>
     <div class="left">
-        <ons-back-button>戻る</ons-back-button>
+      <ons-toolbar-button onclick="EditNavigator.popPage();" modifier="quiet">キャンセル</ons-toolbar-button>
+    </div>
+    <div class="center">イベント新規作成</div>
+    <div class="right" style="margin-top:-0.7px;">
+        <ons-toolbar-button modifier="quiet" style="font-weight: bold;" onclick="EventAdd()">作成する</ons-toolbar-button>
     </div>
 </ons-toolbar>
 <div>
@@ -109,6 +112,6 @@
 
 </div>
 <br>
-    <div>
+    <!--<div>
     <ons-button onclick="EventAdd()" modifier="eve_update">作成する</ons-button>
-</div>
+</div>-->
