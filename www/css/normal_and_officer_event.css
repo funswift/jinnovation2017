@@ -1,3 +1,14 @@
+/*作成するボタン*/
+.create-button {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*キャンセルボタン*/
+.cansell-button {
+  font-size: 14px;
+}
+
 /*参加ボタン*/
 .button--sanka{
     background-color: #ccc;
@@ -467,6 +478,3 @@
     left:25px;
     font-weight: 900;
 }
-
-
-

@@ -2,11 +2,11 @@
 <!-- ツールバー -->
 <ons-toolbar ng-controller="EditCtrl">
     <div class="left">
-      <ons-toolbar-button onclick="EditNavigator.popPage();" modifier="quiet">キャンセル</ons-toolbar-button>
+      <ons-toolbar-button onclick="EditNavigator.popPage();" class="cansell-button" modifier="quiet">キャンセル</ons-toolbar-button>
     </div>
     <div class="center">イベント編集</div>
     <div class="right" style="margin-top:-0.7px;">
-        <ons-toolbar-button modifier="quiet" style="font-weight: bold;" ng-click="EventUpdate()">更新する</ons-toolbar-button>
+        <ons-toolbar-button modifier="quiet" class="create-button" ng-click="EventUpdate()">更新する</ons-toolbar-button>
     </div>
 </ons-toolbar>
 <ons-page class="editpage" ng-controller="EditCtrl">

@@ -2,11 +2,11 @@
 
 <ons-toolbar ng-controller="JoinCtrl">
     <div class="left">
-      <ons-toolbar-button onclick="EditNavigator.popPage();" modifier="quiet">キャンセル</ons-toolbar-button>
+      <ons-toolbar-button onclick="EditNavigator.popPage();" class="cansell-button" modifier="quiet">キャンセル</ons-toolbar-button>
     </div>
     <div class="center">参加申し込み</div>
     <div class="right" style="margin-top:-0.7px;">
-        <ons-toolbar-button modifier="quiet" style="font-weight: bold;" ng-click="IsSeinen()">完了</ons-toolbar-button>
+        <ons-toolbar-button modifier="quiet" class="create-button" ng-click="IsSeinen()">完了</ons-toolbar-button>
     </div>
 </ons-toolbar>
 <ons-page ng-controller="JoinCtrl">
