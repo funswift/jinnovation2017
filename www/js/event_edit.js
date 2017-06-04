@@ -93,7 +93,13 @@ app.controller('EditCtrl', function ($scope) {
                             messageHTML: event_name+'を<br>更新しました。',
                             buttonLabel: 'OK',
                             callback: function(){
-                                EditNavigator.resetToPage("views/admin/admin_tab.html");
+                                EditNavigator.on('postpop', function(event){//Navigatorの挙動を設定
+                                    if (EditNavigator.topPage.name == "views/admin/admin_event_detail.html"){                                 
+                                        EditNavigator.popPage({"animation":"none"});
+                                        GetEventListByAuth("admin");
+                                    }
+                                });
+                                EditNavigator.popPage({"animation":"none"});
                             }
                         });
                     })
